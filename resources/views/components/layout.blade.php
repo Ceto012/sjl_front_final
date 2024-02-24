@@ -40,13 +40,12 @@
 
 <body class="  ">
 
-    @yield('components.sides.sidebar')
-    {{-- @include('components.sides.sidebar') --}}
-    @include('components.sides.sidenav') <!-- Esto no es necesario si no lo estás utilizando, puedes eliminarlo -->
-
+    @include('components.navbar.sidebar')
+    
     {{ $slot }}
+    @include('components.navbar.sidenav') 
 
-    @include('components.sides.footer')
+    @include('components.navbar.footer')
 
     <!-- Library Bundle Script -->
     <script src="{{ asset('assets/js/core/libs.min.js') }}"></script>
