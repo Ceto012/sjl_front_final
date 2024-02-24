@@ -1,0 +1,178 @@
+#sensorData {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Cambiar el tamaño mínimo de las columnas */
+    gap: 5px; /* Reducir el espacio entre las celdas */
+    align-items: center;
+}
+
+#sensorData .sensor-item {
+    padding: 20px; /* Añadir márgenes internos a los elementos */
+    background-color: #f0f0f0; /* Cambiar el color de fondo de los elementos */
+    border-radius: 8px; /* Agregar bordes redondeados a los elementos */
+}
+
+.head-zone{
+    font-weight: bold;
+    color: #fff;
+    /* text-align: center; */
+    display: block;
+    /* margin-bottom: 24px; */ 
+    font-size: 20px;
+}
+
+.sensorWidget {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #7bcbf3; /* Color de fondo rojo más suave */
+    color: #009BE6; /* Color de texto rojo */
+    border: 2px solid #009BE6; /* Borde rojo */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1); /* Sombra roja */
+    animation: colorChange 2s infinite alternate; /* Animación de parpadeo en rojo */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.sensorWidgetShort {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fdf1aa; /* Color de fondo rojo más suave */
+    color: #fcdb1f; /* Color de texto rojo */
+    border: 2px solid #fcdb1f; /* Borde rojo */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1); /* Sombra roja */
+    animation: colorChangeShort 2s infinite alternate; /* Animación de parpadeo en rojo */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+
+
+
+.sensorWidgetDouble {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffcccc; /* Color de fondo rojo más suave */
+    color: #fc7b03; /* Color de texto rojo */
+    border: 2px solid #fc7b03; /* Borde rojo */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1); /* Sombra roja */
+    animation: colorChangeDouble 2s infinite alternate; /* Animación de parpadeo en rojo */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.sensorWidgetLong {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffcccc; /* Color de fondo rojo más suave */
+    color: #ff0000; /* Color de texto rojo */
+    border: 2px solid #ff0000; /* Borde rojo */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1); /* Sombra roja */
+    animation: colorChangeLong 2s infinite alternate; /* Animación de parpadeo en rojo */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.sensorWidget:hover {
+    background-color: #ff9999; /* Color de fondo rojo más oscuro al pasar el ratón */
+    border-color: #ff6666; /* Color de borde rojo más oscuro al pasar el ratón */
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #7bcbf3;
+        color: #080808;
+        border-color: #009BE6;
+    }
+
+    100% {
+        background-color: #009BE6; /* Cambia a rojo sólido */
+        color: #070707; /* Cambia a texto blanco */
+        border-color: #009BE6; /* Mantiene el borde rojo */
+    }
+} 
+
+@keyframes colorChangeLong {
+    0% {
+        background-color: #ffcccc;
+        color: #ff0000;
+        border-color: #ff0000;
+    }
+
+    100% {
+        background-color: #ff0000; /* Cambia a rojo sólido */
+        color: #0a0a0a; /* Cambia a texto blanco */
+        border-color: #ff0000; /* Mantiene el borde rojo */
+    }
+}
+
+
+@keyframes colorChangeShort {
+    0% {
+        background-color: #f7eebf;
+        color: #020202;
+        border-color: #fcdb1f;
+    }
+
+    100% {
+        background-color: #fcdb1f; /* Cambia a rojo sólido */
+        color: #020202; /* Cambia a texto blanco */
+        border-color: #fcdb1f; /* Mantiene el borde rojo */
+    }
+}
+
+@keyframes colorChangeDouble {
+    0% {
+        background-color: #f5d1b0;
+        color: #020202;
+        border-color: #fc7b03;
+    }
+
+    100% {
+        background-color: #fc7b03; /* Cambia a rojo sólido */
+        color: #020202; /* Cambia a texto blanco */
+        border-color: #fc7b03; /* Mantiene el borde rojo */
+    }
+}
+
+/* Ajustar el card para que ocupe toda la pantalla */
+.card.fullscreen {
+    width: 100%;
+}
+
+/* Ocultar el sidebar en modo de pantalla completa */
+.sidebar.fullscreen {
+    display: none;
+}
+
+
+   /* Estilo para el sidebar */
+   #sidebarWrapper {
+    position: fixed; /* Posición fija para que se mantenga en su lugar mientras se desplaza la página */
+    top: 0; /* Alineado con la parte superior de la ventana del navegador */
+    left: 0; /* Alineado con el borde izquierdo de la ventana del navegador */
+    bottom: 0; /* Se extiende hasta la parte inferior de la ventana del navegador */
+    width: 250px; /* Ancho del sidebar */
+    background-color: #fff; /* Color de fondo del sidebar */
+    z-index: 1000; /* Z-index alto para que esté por encima del contenido */
+    transition: transform 0.3s ease; /* Transición suave para animaciones */
+}
+
+/* Estilo para el contenido principal */
+.sidebar.collapsed #second {
+    margin-left: 55px; /* Margen a la izquierda cuando el sidebar está colapsado */
+}
+
+/* Aplicar estilos específicos al modo de pantalla completa */
+@media (display-mode: fullscreen) {
+    #sidebarWrapper {
+        display: none; /* Ocultar el sidebar en modo de pantalla completa */
+    }
+    #second {
+        margin-left: 0; /* No hay margen a la izquierda en modo de pantalla completa */
+    }
+}
+
+
+.custom-img {
+    width: 100px; /* Ancho deseado */
+    height: auto; /* Altura automática para mantener la proporción */
+}
