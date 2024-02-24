@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\Short;
-
+use App\Http\Controllers\RouteController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,7 +20,13 @@ Route::get('/', function () {
     return view('components.alarm.short');
 });
 
-Route::get('/components/layout', 'NombreDelControlador@nombreDelMetodo')->name('layout');
+Route::get('/layout', [RouteController::class, 'showLayout'])->name('layout');
 
 
-Route::get('/components/alarm/short', [Short::class, 'show'])->name('short');
+Route::get('/short', [RouteController::class, 'showShort'])->name('short');
+
+Route::get('/double', [RouteController::class, 'showDouble'])->name('double');
+
+Route::get('/long', [RouteController::class, 'showLong'])->name('long');
+
+Route::get('/admin', [RouteController::class, 'showAdmin'])->name('admin');

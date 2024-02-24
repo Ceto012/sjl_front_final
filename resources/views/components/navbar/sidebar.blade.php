@@ -94,7 +94,7 @@
                     </a>
                     <ul class="sub-nav collapse" id="horizontal-menu" data-bs-parent="#sidebar-menu">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('short') }}">
                                 <i class="icon">
                                     <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
                                         viewBox="0 0 24 24" fill="currentColor">
@@ -109,7 +109,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('double') }}">
                                 <i class="icon">
                                     <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
                                         viewBox="0 0 24 24" fill="currentColor">
@@ -124,7 +124,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#">
+                            <a class="nav-link " href="{{ route('long') }}">
                                 <i class="icon">
                                     <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
                                         viewBox="0 0 24 24" fill="currentColor">
@@ -139,7 +139,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#">
+                            <a class="nav-link " href="{{ route('admin') }}">
                                 <i class="icon">
                                     <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
                                         viewBox="0 0 24 24" fill="currentColor">
