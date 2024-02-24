@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{{ $title }}</title>
+    <title>Alarma-SJL - @yield('title')</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
@@ -40,12 +40,25 @@
 
 <body class="  ">
 
-    @include('components.navbar.sidebar')
-    
-    {{ $slot }}
-    @include('components.navbar.sidenav') 
+    {{-- ejemplo01 --}}
+    @section('sidebar')
+        @include('components.navbar.sidebar')
+    @show
 
-    @include('components.navbar.footer')
+    {{-- ejemplo02 --}}
+    {{-- @include('components.navbar,sidebar') --}}
+
+    {{ $slot }}
+
+
+    @section('sidenav')
+        @include('components.navbar.sidenav')
+    @show
+
+    @section('footer')
+        @include('components.navbar.footer')
+    @show
+
 
     <!-- Library Bundle Script -->
     <script src="{{ asset('assets/js/core/libs.min.js') }}"></script>

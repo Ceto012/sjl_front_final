@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot:title>Short</x-slot:title>
+    @section('title', 'Short')
     <!-- Contenido principal de tu vista -->
     <main class="main-content" id="second">
         <div class="position-relative iq-banner">
