@@ -48,12 +48,8 @@
     {{-- ejemplo02 --}}
     {{-- @include('components.navbar,sidebar') --}}
 
-    {{ $slot }}
-
-
-    @section('sidenav')
-        @include('components.navbar.sidenav')
-    @show
+    {{-- Contenido del slot --}}
+    @yield('content')
 
     @section('footer')
         @include('components.navbar.footer')
