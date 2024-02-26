@@ -45,15 +45,26 @@
         @include('components.navbar.sidebar')
     @show
 
-    {{-- ejemplo02 --}}
-    {{-- @include('components.navbar,sidebar') --}}
+    <main class="main-content" id="second">
+        <div class="position-relative iq-banner">
+            <!--Nav Start-->
+            <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar">
+                <div class="container-fluid navbar-inner">
+                    @section('sidenav')
+                        @include('components.navbar.sidenav')
+                    @show
+                </div>
+            </nav> <!-- Nav Header Component Start -->
+            <!--Nav End-->
+        </div>
+        @yield('content')
+        <!-- Footer Section Start -->
+        @section('footer')
+            @include('components.navbar.footer')
+        @show
 
-    {{-- Contenido del slot --}}
-    @yield('content')
-
-    @section('footer')
-        @include('components.navbar.footer')
-    @show
+        <!-- Footer Section End -->
+    </main>
 
 
     <!-- Library Bundle Script -->
@@ -86,6 +97,12 @@
 
     <!-- App Script -->
     <script src="{{ asset('assets/js/hope-ui.js') }}" defer></script>
+
+    <!--Registro sensores-->
+    <script src="{{ asset('assets/js/registro.js') }}"></script>
+
+    <!--Leaflet-->
+    <script src="{{ asset('assets/leaflet/leaflet.js') }}"></script>
 
 
 
